@@ -18,7 +18,8 @@ export class SuperAdmin {
       };
     }
   }
-  static async deleteOwner({ ownerId, name, token }) {
+  static async deleteOwner({ ownerId, restaurantName:name, token }) {
+    console.log(ownerId,name, token );
     try {
       const response = await axios.delete(
         `${hostUrl}/superAdmin/delete/owner`,

@@ -1,0 +1,83 @@
+.RestaurantPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.Allinform {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(226, 193, 193);
+}
+
+.Res_One {
+    width: 10vw;
+}
+
+.Res_two {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 0, 0);
+}
+.Res_two_A_A{
+    display: flex;
+    flex-direction: row;
+    background-color: cyan;
+}
+
+.Res_two_B{
+    display: flex;
+    flex-direction: row;
+    /* background-color: darkgreen; */
+}
+.Res_two_B_A{
+    width: 10vw;
+    background-color: darkred;
+    /* position: fixed; */
+}
+
+.Res_two_B_B{
+    width: 60vw;
+    /* background-color: deeppink; */
+}
+.Res_two_B_c{
+    width: 10vw;
+    /* background-color: indigo; */
+}
+
+/* .divstickyq{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+} */
+.Res_three {
+    width: 10vw;
+}
+.div_Mallloop_1{
+    display: flex;
+    flex-direction: row;
+}
+
+.div_Mallloop_2{
+    display: flex;
+    flex-direction: row;
+    background-color: darksalmon;
+}
+
+.imagetest{
+    width: 200px;
+    height: 250px;
+}
+
+.imagetest:hover{
+    width: 200px;
+    height: 250px;
+
+    transform: scale(1.3);
+}
+
+html{
+    scroll-behavior: auto;
+}

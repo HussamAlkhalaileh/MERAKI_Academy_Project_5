@@ -3,7 +3,8 @@ import react, { useEffect, useState } from "react";
 import { SuperAdmin } from "../../../controllers/superAdmin";
 import { setRequests, setUsers } from "../../../redux/reducers/superAdmin";
 import { NavigationBar } from "./NavigationMenu";
-
+import "./style.css";
+import { Users } from "./UsersDashboard";
 export const SuperAdminPanel = () => {
   const dispatch = useDispatch();
   const [isUsersShown, setIsUsersShown] = useState(true);
@@ -18,19 +19,10 @@ export const SuperAdminPanel = () => {
       });
 
       dispatch(setRequests(usersResponse.requests));
-      console.log(usersResponse);
     })();
   }, []);
 
-  const showUsers = (user) => {
-    return (
-      <div key={user.id}>
-        <h1>{user.firstName}</h1>
-        <h1>{user.lastName}</h1>
-        <h1>{user.email}</h1>
-      </div>
-    );
-  };
+  
   const showRequests = (request) => {
     return (
       <div key={request.id}>
@@ -43,18 +35,16 @@ export const SuperAdminPanel = () => {
   };
 
   return (
-    <div style={{width:"100vw", display:"flex"}}>
+    <div style={{ width: "100vw", display: "flex" }}>
       <NavigationBar />
-      <div style={{color :"red"}}>
-      {isUsersShown
-        ? superAdminPanel.users.map((ele) => {
-            return showUsers(ele);
-          })
-        : superAdminPanel.requests.map((ele) => {
-            return showRequests(ele);
-          })}
+      <div style={{ color: "red", width: "100%" }}>
+     
+        {isUsersShown
+          ? <Users/>
+          : superAdminPanel.requests.map((ele) => {
+              return showRequests(ele);
+            })}
       </div>
-      
     </div>
   );
 };

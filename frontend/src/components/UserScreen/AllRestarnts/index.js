@@ -1,7 +1,7 @@
 import './style.css'
 import React, { useState, useEffect, useContext } from "react";
-import { User } from "../../controllers/user";
-
+import { User } from "../../../controllers/user";
+// import NavBar from '../NavBar';
 
 import { useNavigate } from "react-router-dom";
 
@@ -31,6 +31,7 @@ const AllRestarnts = () => {
 
 
     return (<div className="AllRestarnts">
+        {/* {<NavBar/>} */}
         <div className="AllRestarnts_A">dd</div>
 
         <div className="AllRestarnts_B">{restaurants ? restaurants.map((elemnt, index) => {

@@ -25,7 +25,7 @@ const createOwner = async (req, res) => {
 const deleteOwner = async (req, res) => {
   const { ownerId, name } = req.body;
 
-  const query = `DELETE FROM users WHERE id=?`;
+  const query = `UPDATE users SET is_deleted=1 WHERE id=?`;
 
   connection.query(query, [ownerId], (err, result) => {
     if (err) {
@@ -36,7 +36,7 @@ const deleteOwner = async (req, res) => {
       });
     }
 
-    const query = `DELETE FROM restaurants WHERE name=?`;
+    const query = `UPDATE users SET is_deleted=1 WHERE name=?`;
     connection.query(query, [name], (err, result) => {
       if (err) {
         return res.status(409).json({

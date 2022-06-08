@@ -1,0 +1,14 @@
+#user-div {
+  display: grid;
+  width: 100%;
+  font-size: 90%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 5% 10% 25% 10% 20% 30%;
+}
+
+#user-div h4{
+    overflow: hidden;
+    
+  }

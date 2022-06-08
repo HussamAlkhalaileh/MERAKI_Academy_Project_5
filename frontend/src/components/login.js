@@ -23,6 +23,9 @@ export const LoginComponent = () => {
             setEmail(e.target.value);
         }}
       />
+      <br/>
+      <br/>
+
       <input
         type="password"
         placeholder="Enter your password : "
@@ -30,7 +33,12 @@ export const LoginComponent = () => {
             setpassword(e.target.value);
         }}
       />
+      <br/>
+      <br/>
+
       <button id="login" onClick={LoginUser}>Login</button>
+      <br/>
+      <br/>
       Don't have an account?
       <a id="toRegisterPage" href="">
         Create an account

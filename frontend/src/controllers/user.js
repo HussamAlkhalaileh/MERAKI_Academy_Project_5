@@ -43,4 +43,25 @@ export class User {
       };
     }
   }
+
+  static async getMealsByRestaurant({ restaurantId }) {
+    try {
+      const response = await axios.get(`${hostUrl}/user/${restaurantId}`);
+      return response.data;
+    } catch (error) {
+      return {
+        success: false,
+        massage: "Server Error",
+        error,
+        result: [],
+      };
+    }
+  }
+
+
+
+
+
 }
+
+
