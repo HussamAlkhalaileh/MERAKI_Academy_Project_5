@@ -13,11 +13,12 @@
   }
   #welcome-div h1 {
     position: absolute;
-    color: orange;
+    color:#252b6d96;
     text-shadow: 1px 1px 3px black;
     width: 50%;
     left: 25%;
     top: 45%;
+    font-size: 50px;
   }
   #join-us-div {
     display: flex;
